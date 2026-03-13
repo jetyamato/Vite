@@ -24,7 +24,7 @@ const App = () => {
     <div>
       <Routes>
       
-        <Route path="/" element={<Index  />} /> {/* Pass handleLogin to Index */}
+        <Route path="/" element={<DashboardIndex />} /> {/* Pass handleLogin to Index */}
         <Route path="/indexlogin" element={<Indexlogin />} />
         <Route
           path="/dashboard"
