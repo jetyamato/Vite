@@ -109,7 +109,9 @@ app.post("/api/login", (req, res) => {
       const user = results[0]; // Assuming `results` contains the user data
 
       // Directly compare the provided password with the stored password
-      if (password !== user.password) {
+      const match = bcrypt.compare(password, user.password);
+
+      if (!match) {
         return res.status(401).json({ error: "Invalid username or password" });
       }
 
