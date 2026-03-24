@@ -6,6 +6,7 @@ import userRoutes from "./routes/users.js";
 import authRoutes from "./routes/auth.js";
 import departmentRoutes from "./routes/departments.js";
 import positionRoutes from "./routes/positions.js";
+import requisitionRoutes from "./routes/requisitions.js";
 
 const app = express();
 const port = process.env.API_PORT;
@@ -17,6 +18,7 @@ app.use(json());
 app.use("/api/users", userRoutes);
 app.use("/api/departments", departmentRoutes);
 app.use("/api/positions", positionRoutes);
+app.use("/api/requisitions", requisitionRoutes);
 app.use("/auth", authRoutes);
 
 // Start the server
